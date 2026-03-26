@@ -3,34 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MGB 301 Test 2 Cheat Sheet</title>
+    <title>MGB 301 Test 2 Cheat Sheet - Max Density</title>
     <style>
         /* Print-specific layout for standard 8.5x11 paper in Portrait */
         @page {
             size: letter portrait;
-            margin: 0.25in; /* Tight margins to maximize usable space */
+            margin: 0.25in;
         }
 
         /* Global Reset and Typography */
-        * {
-            box-sizing: border-box;
-        }
+        * { box-sizing: border-box; }
         body {
-            font-family: "Helvetica Neue", Arial, sans-serif;
-            font-size: 7pt; /* Optimized font size for cheat sheets */
-            line-height: 1.15;
+            background-color: #525659;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
             margin: 0;
-            padding: 0;
-            background-color: white;
+            font-family: "Helvetica Neue", Arial, sans-serif;
             color: #000;
         }
 
-        /* Container & Column Layout */
-        .page-container {
-            width: 100%;
-            max-width: 8in; /* 8.5in minus 0.25in margins */
-            margin: 0 auto;
-            padding: 10px;
+        /* The physical piece of 8.5x11 paper */
+        .page {
+            background-color: white;
+            width: 8.5in;
+            height: 11in;
+            padding: 0.25in;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            overflow: hidden;
+        }
+
+        /* Text and Layout Styling */
+        .page-content {
+            font-size: 7pt;
+            line-height: 1.15;
         }
         .header-title {
             text-align: center;
@@ -42,17 +48,20 @@
             font-weight: bold;
         }
         .content-columns {
-            column-count: 4; /* 4 columns as requested */
-            column-gap: 0.15in; /* Space between columns */
+            column-count: 4; 
+            column-gap: 0.15in; 
         }
 
-        /* Section & Element Styling for maximum density */
+        /* Section & Element Styling */
         section {
             border: 1px solid #ccc;
             padding: 4px;
-            margin-bottom: 6px;
+            margin-bottom: 5px;
             border-radius: 2px;
-            /* Prevents a section block from splitting awkwardly across columns if possible */
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+        .sub-section {
             break-inside: avoid;
             page-break-inside: avoid;
         }
@@ -61,163 +70,270 @@
             background: #222;
             color: white;
             padding: 2px 3px;
-            margin: 0 0 4px 0;
+            margin: 0 0 3px 0;
             text-align: center;
             text-transform: uppercase;
         }
         h3 {
             font-size: 7.5pt;
-            margin: 4px 0 2px 0;
+            margin: 3px 0 2px 0;
             border-bottom: 1px solid #eee;
             color: #b71c1c;
         }
-        p {
-            margin: 2px 0;
-            text-align: left;
-        }
-        ul {
-            margin: 2px 0 2px 0;
-            padding-left: 12px;
-            list-style-type: square;
-        }
-        li {
-            margin-bottom: 1.5px;
-        }
-
-        /* Text Utilities */
+        p { margin: 1.5px 0; text-align: left; }
+        ul { margin: 1.5px 0; padding-left: 12px; list-style-type: square; }
+        li { margin-bottom: 1px; }
         .bold { font-weight: bold; }
         .italic { font-style: italic; }
+        .highlight { background-color: #fff9c4; } /* Subtle highlight for ultra-key terms */
 
-        /* Ensure clean display in browser outside of print view */
-        @media screen {
-            body {
-                background-color: #f0f0f0;
-                padding: 20px;
-            }
-            .page-container {
-                background-color: white;
-                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            }
+        @media print {
+            @page { size: letter portrait; margin: 0; }
+            body { background-color: white; padding: 0; display: block; }
+            .page { box-shadow: none; width: 100%; height: 100%; padding: 0.25in; }
         }
     </style>
 </head>
 <body>
 
-<div class="page-container">
-    <div class="header-title">MGB 301: Test 2 Study Guide (Spring 2026)</div>
+<div class="page">
+    <div class="page-content">
+        <div class="header-title">MGB 301: Test 2 Study Guide (Spring 2026)</div>
 
-    <div class="content-columns">
-        
-        <section id="ch9">
-            <h2>CH 9: GROUP BEHAVIOR</h2>
-            <p><span class="bold">Group:</span> 2+ individuals, interacting & interdependent.</p>
-            <p><span class="bold">Team:</span> Shared leadership, collective accountability.</p>
+        <div class="content-columns">
             
-            <h3>5-Stage Model</h3>
-            <ul>
-                <li><span class="bold">Forming:</span> Uncertainty.</li>
-                <li><span class="bold">Storming:</span> Intragroup conflict.</li>
-                <li><span class="bold">Norming:</span> Cohesiveness & identity.</li>
-                <li><span class="bold">Performing:</span> Functional & task-focused.</li>
-                <li><span class="bold">Adjourning:</span> Wrap-up.</li>
-            </ul>
+            <section id="ch9">
+                <h2>CH 9: GROUP BEHAVIOR</h2>
+                <div class="sub-section">
+                    <p><span class="bold">Group:</span> 2+ individuals, interacting/interdependent, achieving specific objectives.</p>
+                    <p><span class="bold">Why Join?</span> Security, status, self-esteem, affiliation, power, goal achievement.</p>
+                    <h3>5-Stage Model</h3>
+                    <ul>
+                        <li><span class="bold">Forming:</span> Uncertainty about purpose/leaders.</li>
+                        <li><span class="bold">Storming:</span> Intragroup conflict; resisting control.</li>
+                        <li><span class="bold">Norming:</span> Cohesiveness, identity, standard behavior forms.</li>
+                        <li><span class="bold">Performing:</span> Fully functional, energy on task.</li>
+                        <li><span class="bold">Adjourning:</span> Wrap-up (for temp groups).</li>
+                    </ul>
+                </div>
 
-            <h3>Group Properties</h3>
-            <p><span class="bold">Roles:</span> Expectations vs. Perception. <br><span class="bold">Conflict:</span> Divergent expectations.</p>
-            <p><span class="bold">Norms:</span> Hawthorne (social > $) & Conformity (Asch Study).</p>
-            <p><span class="bold">Status:</span> Position defines power; high status can deviate from norms.</p>
-            <p><span class="bold">Size:</span> <span class="italic">Social Loafing</span> (less effort in groups). Ringelmann effect.</p>
-            <p><span class="bold">Cohesiveness:</span> Attraction level. Productivity depends on alignment with performance norms.</p>
+                <div class="sub-section">
+                    <h3>Group Properties</h3>
+                    <p><span class="bold">1. Roles:</span> Expected behavior patterns.</p>
+                    <ul>
+                        <li><span class="italic">Identity:</span> Attitudes/behaviors consistent with role.</li>
+                        <li><span class="italic">Perception:</span> Our view of how we should act.</li>
+                        <li><span class="italic">Expectations:</span> Others' view of how we should act.</li>
+                        <li><span class="italic">Psych Contract:</span> Unwritten expectations between employer & employee.</li>
+                        <li><span class="italic">Role Conflict:</span> Divergent expectations (e.g., family vs work).</li>
+                    </ul>
+                </div>
 
-            <h3>Decision Making</h3>
-            <ul>
-                <li><span class="bold">Groupthink:</span> Consensus overrides appraisal.</li>
-                <li><span class="bold">Groupshift:</span> Polarized/Extreme views.</li>
-                <li><span class="bold">NGT:</span> Nominal Group Technique (Independent ranking).</li>
-            </ul>
-        </section>
+                <div class="sub-section">
+                    <p><span class="bold">2. Norms:</span> Acceptable standards of behavior.</p>
+                    <ul>
+                        <li><span class="italic">Hawthorne Studies:</span> Worker behavior highly influenced by group norms & social identity, not just money/environment.</li>
+                        <li><span class="italic">Conformity (Asch):</span> Adjusting behavior to align with group; fear of standing out.</li>
+                        <li><span class="italic">Negative Norms:</span> Deviant workplace behavior (production, property, political, aggression).</li>
+                    </ul>
+                </div>
 
-        <section id="ch10">
-            <h2>CH 10: WORK TEAMS</h2>
-            <p><span class="bold">Synergy:</span> Teams = Positive synergy (Sum > Parts).</p>
+                <div class="sub-section">
+                    <p><span class="bold">3. Status:</span> Socially defined rank. <span class="italic">Status Characteristics Theory</span> says it derives from: 1) Power a person wields over others, 2) Ability to contribute to goals, 3) Personal characteristics. High status members can deviate from norms more easily.</p>
+                    <p><span class="bold">4. Size:</span> <span class="italic">Social Loafing:</span> Tendency to expend less effort in a group (Ringelmann effect). Prevent by: setting group goals, peer evaluation, individual accountability.</p>
+                    <p><span class="bold">5. Cohesiveness:</span> Attraction to group & motivation to stay. <br>
+                    <span class="highlight">High Coh + High Perf Norms = Highest Productivity.</span><br>
+                    High Coh + Low Perf Norms = Low Productivity.</p>
+                </div>
+
+                <div class="sub-section">
+                    <h3>Decision Making</h3>
+                    <p><span class="bold">Strengths:</span> More info, diversity of views, higher quality, acceptance of solution.</p>
+                    <p><span class="bold">Weaknesses:</span> Time consuming, conformity pressure, dominated by few, ambiguous responsibility.</p>
+                    <ul>
+                        <li><span class="bold">Groupthink:</span> Consensus norm overrides realistic appraisal of alternatives. Deters minority views.</li>
+                        <li><span class="bold">Groupshift:</span> Group discussions lead to more extreme positions (often riskier) than individual initial views.</li>
+                        <li><span class="bold">Brainstorming:</span> Idea generation, strictly no criticism allowed.</li>
+                        <li><span class="bold">NGT (Nominal Group Tech):</span> Silent idea generation -> round-robin presentation -> discussion -> independent secret ranking. (Outperforms brainstorming).</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="ch10">
+                <h2>CH 10: WORK TEAMS</h2>
+                <div class="sub-section">
+                    <p><span class="bold">Groups vs Teams:</span> Groups share info/make decisions (Neutral/Neg Synergy). Teams work toward specific goal with joint effort (Positive Synergy - whole is > sum of parts).</p>
+                    <p><span class="bold">Process Loss:</span> When team performance is worse than individual potential due to coordination/motivation issues.</p>
+                    
+                    <h3>Types of Teams</h3>
+                    <ul>
+                        <li><span class="bold">Problem-Solving:</span> 5-12 people, same dept, meet a few hours/week to improve quality/efficiency. Cannot implement changes.</li>
+                        <li><span class="bold">Self-Managed:</span> 10-15 people, take on former supervisor responsibilities (planning, scheduling, acting on problems).</li>
+                        <li><span class="bold">Cross-Functional:</span> Employees from same hierarchical level but different work areas (Task forces, committees).</li>
+                        <li><span class="bold">Virtual:</span> Dispersed members linked via tech. Lack paraverbal/nonverbal cues; need high trust.</li>
+                    </ul>
+                </div>
+
+                <div class="sub-section">
+                    <h3>Team Effectiveness Model</h3>
+                    <ul>
+                        <li><span class="bold">Context:</span> Adequate resources, Leadership/Structure, Climate of trust, Performance eval & reward systems.</li>
+                        <li><span class="bold">Composition:</span> Abilities of members, Personality (Conscientiousness/Openness), Allocating roles, Diversity, Size (ideal 5-9), Member preferences.</li>
+                        <li><span class="bold">Work Design:</span> Autonomy, Skill variety, Task identity, Task significance (enhances motivation).</li>
+                        <li><span class="bold">Process:</span> Common purpose, Specific goals (SMART), Team efficacy (belief in success), Conflict levels (task conflict can be good), Social loafing minimization.</li>
+                    </ul>
+                    <p><span class="bold">When to use teams?</span> Ask: Is work complex? Does it create a common purpose? Are members highly interdependent?</p>
+                </div>
+            </section>
+
+            <section id="ch11">
+                <h2>CH 11: COMMUNICATION</h2>
+                <div class="sub-section">
+                    <p><span class="bold">Process Model:</span> Sender -> Encodes Message -> Channel -> Receiver Decodes -> Feedback loop. (Noise = barriers).</p>
+                    <p><span class="bold">Channels:</span> <span class="italic">Formal:</span> Established by org, transmits task info. <span class="italic">Informal:</span> Social/personal messages.</p>
+                    
+                    <h3>Direction & Networks</h3>
+                    <ul>
+                        <li><span class="bold">Downward:</span> Assign goals, instructions. (1-way).</li>
+                        <li><span class="bold">Upward:</span> Feedback, report progress/problems.</li>
+                        <li><span class="bold">Lateral:</span> Between peers; saves time, coordination.</li>
+                    </ul>
+                    <p><span class="bold">Formal Small Group Networks:</span></p>
+                    <ul>
+                        <li><span class="italic">Chain:</span> Rigidly follows chain of command.</li>
+                        <li><span class="italic">Wheel:</span> Central figure acts as conduit for all.</li>
+                        <li><span class="italic">All-Channel:</span> All members actively communicate (best for self-managed teams).</li>
+                    </ul>
+                    <p><span class="bold">The Grapevine:</span> Informal network. 75% accurate. Emerges when situations are important, ambiguous, or cause anxiety.</p>
+                </div>
+
+                <div class="sub-section">
+                    <h3>Channel Richness & Barriers</h3>
+                    <p><span class="bold">Media Richness:</span> Ability to handle multiple cues simultaneously, facilitate rapid feedback, and be personal. <span class="italic">High:</span> Face-to-Face, Video. <span class="italic">Low:</span> Memos, Bulletins.</p>
+                    <p><span class="bold">Barriers to Communication:</span></p>
+                    <ul>
+                        <li><span class="italic">Filtering:</span> Sender manipulates info so it seems more favorable.</li>
+                        <li><span class="italic">Selective Perception:</span> Receiver selectively hears based on needs/background.</li>
+                        <li><span class="italic">Info Overload:</span> Info exceeds processing capacity.</li>
+                        <li><span class="italic">Emotions:</span> Affects interpretation.</li>
+                        <li><span class="italic">Language/Jargon:</span> Words mean different things.</li>
+                        <li><span class="italic">Silence:</span> Ignoring issues.</li>
+                        <li><span class="italic">Apprehension:</span> Social anxiety regarding oral/written comms.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="ch12">
+                <h2>CH 12: LEADERSHIP</h2>
+                <div class="sub-section">
+                    <p><span class="bold">Lead vs Mgmt:</span> Leaders challenge status quo, create vision, inspire. Managers formulate detailed plans, oversee operations, maintain order.</p>
+                    
+                    <h3>Trait & Behavioral Theories</h3>
+                    <p><span class="bold">Trait (Leaders are born):</span> Focus on personal qualities. Big Five framework: <span class="highlight">Extraversion is the strongest predictor.</span> Conscientiousness & Openness also linked. Emotional Intelligence (EI) is crucial.</p>
+                    <p><span class="bold">Behavioral (Leaders can be trained):</span></p>
+                    <ul>
+                        <li><span class="bold">Ohio State:</span> <span class="italic">Initiating Structure</span> (defining roles/goals) vs <span class="italic">Consideration</span> (trust/respect for feelings).</li>
+                        <li><span class="bold">Michigan:</span> <span class="italic">Production-Oriented</span> (task focus) vs <span class="italic">Employee-Oriented</span> (interpersonal focus).</li>
+                        <li><span class="bold">Managerial Grid (Blake/Mouton):</span> 9x9 matrix. (9,9) "Team Management" is ideal.</li>
+                    </ul>
+                </div>
+
+                <div class="sub-section">
+                    <h3>Contingency Theories</h3>
+                    <p><span class="bold">Fiedler Model:</span> Effective performance depends on match between leader style & situation. <span class="highlight">Assumption: Leadership style is FIXED.</span> Evaluated via LPC (Least Preferred Coworker) questionnaire. High LPC = Relationship oriented. Low LPC = Task oriented. <br>
+                    <span class="italic">Situational Control:</span> 1) Leader-member relations, 2) Task structure, 3) Position power. Task-oriented best in very favorable/unfavorable situations. Relation-oriented best in moderate.</p>
+                    
+                    <p><span class="bold">Cognitive Resource Theory:</span> Extension of Fiedler. Stress impacts leadership. Low stress -> Intelligence > Experience. High stress -> Experience > Intelligence.</p>
+                    
+                    <p><span class="bold">Path-Goal Theory (House):</span> Leader's job is to assist followers in attaining goals & provide direction/support. Styles are flexible:</p>
+                    <ul>
+                        <li><span class="italic">Directive:</span> Gives specific guidance (best for ambiguous tasks).</li>
+                        <li><span class="italic">Supportive:</span> Friendly, shows concern (best for stressful tasks).</li>
+                        <li><span class="italic">Participative:</span> Consults with followers.</li>
+                        <li><span class="italic">Achievement:</span> Sets high goals, expects high performance.</li>
+                    </ul>
+                    
+                    <p><span class="bold">LMX (Leader-Member Exchange):</span> Leaders create "In-Groups" (trusted, get disproportionate attention/rewards, lower turnover) and "Out-Groups" based on time pressure & compatibility.</p>
+                </div>
+
+                <div class="sub-section">
+                    <h3>Charismatic & Full Range</h3>
+                    <p><span class="bold">Charismatic:</span> Have vision, take personal risks, sensitive to follower needs, exhibit unconventional behaviors. <br>
+                    <span class="italic">Becoming one:</span> Maintain optimistic view, use passion as catalyst, tap into emotions.<br>
+                    <span class="italic">Dark Side:</span> Personal goals override org goals; narcissism.</p>
+
+                    <p><span class="bold">Full Range Leadership Model:</span></p>
+                    <p><span class="italic">Transactional (Management):</span></p>
+                    <ul>
+                        <li><span class="bold">Laissez-Faire:</span> Abdicates responsibilities.</li>
+                        <li><span class="bold">MBE-Passive:</span> Intervenes only if standards aren't met.</li>
+                        <li><span class="bold">MBE-Active:</span> Watches/searches for deviations.</li>
+                        <li><span class="bold">Contingent Reward:</span> Contracts exchange of rewards for effort.</li>
+                    </ul>
+                    <p><span class="italic">Transformational (Inspires):</span></p>
+                    <ul>
+                        <li><span class="bold">Idealized Influence:</span> Provides vision, gains respect/trust.</li>
+                        <li><span class="bold">Inspirational Motivation:</span> Communicates high expectations.</li>
+                        <li><span class="bold">Intellectual Stimulation:</span> Promotes intelligence/problem solving.</li>
+                        <li><span class="bold">Individualized Consideration:</span> Gives personal attention, coaches.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="ch14">
+                <h2>CH 14: CONFLICT & NEG.</h2>
+                <div class="sub-section">
+                    <p><span class="bold">Conflict:</span> Process that begins when one party perceives another has negatively affected something they care about.</p>
+                    <p><span class="bold">Transitions in Thought:</span></p>
+                    <ul>
+                        <li><span class="italic">Traditional:</span> All conflict is harmful/bad. Must be avoided.</li>
+                        <li><span class="italic">Interactionist:</span> Conflict is a positive force and absolutely necessary for effective performance.</li>
+                        <li><span class="italic">Resolution-Focused:</span> Conflict is inevitable; focus on productive conflict resolution.</li>
+                    </ul>
+                    
+                    <h3>Types & Styles of Conflict</h3>
+                    <ul>
+                        <li><span class="bold">Task:</span> Relates to content/goals. (Functional if low/mod).</li>
+                        <li><span class="bold">Relationship:</span> Interpersonal. (<span class="highlight">Always Dysfunctional</span>).</li>
+                        <li><span class="bold">Process:</span> How work gets done. (Functional if low).</li>
+                    </ul>
+                    <p><span class="bold">Conflict Handling Intentions (Styles):</span></p>
+                    <ul>
+                        <li><span class="bold">Competing:</span> Assertive & Uncooperative (Win-Lose).</li>
+                        <li><span class="bold">Collaborating:</span> Assertive & Cooperative (Win-Win).</li>
+                        <li><span class="bold">Avoiding:</span> Unassertive & Uncooperative (Lose-Lose).</li>
+                        <li><span class="bold">Accommodating:</span> Unassertive & Cooperative (Lose-Win).</li>
+                        <li><span class="bold">Compromising:</span> Mid-range on both (Partial Win/Lose).</li>
+                    </ul>
+                    <p><span class="bold">Perceptual Distortions:</span> Errors in judging conflict (e.g., assuming a fixed pie, anchoring on initial offers).</p>
+                </div>
+
+                <div class="sub-section">
+                    <h3>Negotiation</h3>
+                    <p>Process where 2+ parties exchange goods/services and attempt to agree upon the exchange rate.</p>
+                    <p><span class="bold">Distributive Bargaining:</span> Focus on claiming value. Fixed pie, Win-Lose, opposed interests, low info sharing, short-term focus.</p>
+                    <p><span class="bold">Integrative Bargaining:</span> Focus on creating value. Expand the pie, Win-Win, congruent interests, high info sharing, long-term focus.</p>
+                    
+                    <h3>Key Negotiation Terms</h3>
+                    <ul>
+                        <li><span class="bold">BATNA:</span> Best Alternative To a Negotiated Agreement. This determines your lowest acceptable value. It is your ultimate source of power.</li>
+                        <li><span class="bold">Target Point:</span> What you ideally want to achieve.</li>
+                        <li><span class="bold">Reservation (Resistance) Point:</span> The lowest acceptable outcome (Bottom line). Walking away point.</li>
+                        <li><span class="bold">Bargaining Zone (ZOPA):</span> The space between the buyer's reservation point and the seller's reservation point. Overlap means agreement is possible.</li>
+                    </ul>
+
+                    <h3>Strategies for Creating Value</h3>
+                    <ul>
+                        <li>Assume value CAN be created.</li>
+                        <li>Take a cooperative approach; build trust.</li>
+                        <li><span class="bold">Logrolling:</span> Trade off issues that are most important to you for what is most important to them.</li>
+                        <li>Make package deals, not single-issue offers.</li>
+                        <li>Make multiple offers simultaneously.</li>
+                    </ul>
+                </div>
+            </section>
             
-            <h3>Types of Teams</h3>
-            <ul>
-                <li><span class="bold">Problem-Solving:</span> Quality/Efficiency focus.</li>
-                <li><span class="bold">Self-Managed:</span> No supervisor; plan own work.</li>
-                <li><span class="bold">Cross-Functional:</span> Diverse expertise, same level.</li>
-                <li><span class="bold">Virtual:</span> Geographically dispersed via tech.</li>
-            </ul>
-
-            <h3>Effectiveness Model</h3>
-            <ul>
-                <li><span class="bold">Context:</span> Resources, Structure, Trust.</li>
-                <li><span class="bold">Composition:</span> Ability, Conscientiousness, Size (5-9).</li>
-                <li><span class="bold">Work Design:</span> Autonomy, Task Identity.</li>
-                <li><span class="bold">Process:</span> Purpose, Efficacy, Conflict.</li>
-            </ul>
-        </section>
-
-        <section id="ch11">
-            <h2>CH 11: COMMUNICATION</h2>
-            <p><span class="bold">Model:</span> Sender -> Encode -> Channel -> Decode -> Receiver.</p>
-            
-            <h3>Networks & Richness</h3>
-            <ul>
-                <li><span class="bold">Networks:</span> Chain (Formal), Wheel (Central), All-Channel (Active).</li>
-                <li><span class="bold">Grapevine:</span> 75% accuracy; informal.</li>
-                <li><span class="bold">Richness:</span> Face-to-face (High) vs. Reports (Low).</li>
-                <li><span class="bold">Barriers:</span> Filtering, Overload, Emotions, Apprehension.</li>
-            </ul>
-        </section>
-
-        <section id="ch12">
-            <h2>CH 12: LEADERSHIP</h2>
-            <h3>Trait & Behavioral</h3>
-            <p><span class="bold">Trait:</span> Born (Extraversion/EI). <span class="bold">Behavior:</span> Trained.</p>
-            <ul>
-                <li><span class="bold">Ohio:</span> Structure vs. Consideration.</li>
-                <li><span class="bold">Michigan:</span> Employee vs. Production.</li>
-                <li><span class="bold">Grid:</span> 9,9 Team Management is ideal.</li>
-            </ul>
-
-            <h3>Contingency Theories</h3>
-            <p><span class="bold">Fiedler:</span> Fixed style (LPC). Match to situation (Relations, Structure, Power).</p>
-            <p><span class="bold">Path-Goal:</span> Clarify path, remove blocks. Styles: Directive, Supportive, Participative, Achievement.</p>
-            <p><span class="bold">LMX:</span> In-Group vs. Out-Group dynamics.</p>
-            <p><span class="bold">Cognitive Resource:</span> Stress forces reliance on Experience > Intellect.</p>
-
-            <h3>Leadership Types</h3>
-            <ul>
-                <li><span class="bold">Charismatic:</span> Vision/Risk. Dark side: Narcissism.</li>
-                <li><span class="bold">Transactional:</span> Reward/Exchange, Laissez-Faire.</li>
-                <li><span class="bold">Transformational:</span> 4 I's (Idealized, Inspirational, Intellectual, Individual).</li>
-            </ul>
-        </section>
-
-        <section id="ch14">
-            <h2>CH 14: CONFLICT & NEG.</h2>
-            <p><span class="bold">Views:</span> Traditional (Bad), Interactionist (Needed), Resolution (Manage).</p>
-            <h3>Conflict Types</h3>
-            <ul>
-                <li><span class="bold">Task:</span> Goals (Functional if low).</li>
-                <li><span class="bold">Relationship:</span> Personal (Always Dysfunctional).</li>
-                <li><span class="bold">Process:</span> How-to (Functional if low).</li>
-            </ul>
-
-            <h3>Negotiation</h3>
-            <p><span class="bold">Distributive:</span> Fixed pie, Win-Lose, low info.</p>
-            <p><span class="bold">Integrative:</span> Expand pie, Win-Win, high info.</p>
-            
-            <h3>Key Terms</h3>
-            <ul>
-                <li><span class="bold">BATNA:</span> Best Alternative (Power source).</li>
-                <li><span class="bold">Target/Resistance:</span> Goal vs. Bottom line.</li>
-                <li><span class="bold">Bargaining Zone:</span> Overlap of resistance points.</li>
-            </ul>
-            <p><span class="bold">Logrolling:</span> Trading off issues of different importance to create value.</p>
-        </section>
-        
+        </div>
     </div>
 </div>
 
