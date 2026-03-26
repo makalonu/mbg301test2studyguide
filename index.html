@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MGB 301 Test 2 Cheat Sheet</title>
+    <style>
+        /* Print-specific layout for standard 8.5x11 paper in Portrait */
+        @page {
+            size: letter portrait;
+            margin: 0.25in; /* Tight margins to maximize usable space */
+        }
+
+        /* Global Reset and Typography */
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            font-size: 7pt; /* Optimized font size for cheat sheets */
+            line-height: 1.15;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: #000;
+        }
+
+        /* Container & Column Layout */
+        .page-container {
+            width: 100%;
+            max-width: 8in; /* 8.5in minus 0.25in margins */
+            margin: 0 auto;
+            padding: 10px;
+        }
+        .header-title {
+            text-align: center;
+            font-size: 11pt;
+            margin: 0 0 8px 0;
+            padding-bottom: 3px;
+            border-bottom: 1.5px solid #000;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .content-columns {
+            column-count: 4; /* 4 columns as requested */
+            column-gap: 0.15in; /* Space between columns */
+        }
+
+        /* Section & Element Styling for maximum density */
+        section {
+            border: 1px solid #ccc;
+            padding: 4px;
+            margin-bottom: 6px;
+            border-radius: 2px;
+            /* Prevents a section block from splitting awkwardly across columns if possible */
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+        h2 {
+            font-size: 8pt;
+            background: #222;
+            color: white;
+            padding: 2px 3px;
+            margin: 0 0 4px 0;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        h3 {
+            font-size: 7.5pt;
+            margin: 4px 0 2px 0;
+            border-bottom: 1px solid #eee;
+            color: #b71c1c;
+        }
+        p {
+            margin: 2px 0;
+            text-align: left;
+        }
+        ul {
+            margin: 2px 0 2px 0;
+            padding-left: 12px;
+            list-style-type: square;
+        }
+        li {
+            margin-bottom: 1.5px;
+        }
+
+        /* Text Utilities */
+        .bold { font-weight: bold; }
+        .italic { font-style: italic; }
+
+        /* Ensure clean display in browser outside of print view */
+        @media screen {
+            body {
+                background-color: #f0f0f0;
+                padding: 20px;
+            }
+            .page-container {
+                background-color: white;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-container">
+    <div class="header-title">MGB 301: Test 2 Study Guide (Spring 2026)</div>
+
+    <div class="content-columns">
+        
+        <section id="ch9">
+            <h2>CH 9: GROUP BEHAVIOR</h2>
+            <p><span class="bold">Group:</span> 2+ individuals, interacting & interdependent.</p>
+            <p><span class="bold">Team:</span> Shared leadership, collective accountability.</p>
+            
+            <h3>5-Stage Model</h3>
+            <ul>
+                <li><span class="bold">Forming:</span> Uncertainty.</li>
+                <li><span class="bold">Storming:</span> Intragroup conflict.</li>
+                <li><span class="bold">Norming:</span> Cohesiveness & identity.</li>
+                <li><span class="bold">Performing:</span> Functional & task-focused.</li>
+                <li><span class="bold">Adjourning:</span> Wrap-up.</li>
+            </ul>
+
+            <h3>Group Properties</h3>
+            <p><span class="bold">Roles:</span> Expectations vs. Perception. <br><span class="bold">Conflict:</span> Divergent expectations.</p>
+            <p><span class="bold">Norms:</span> Hawthorne (social > $) & Conformity (Asch Study).</p>
+            <p><span class="bold">Status:</span> Position defines power; high status can deviate from norms.</p>
+            <p><span class="bold">Size:</span> <span class="italic">Social Loafing</span> (less effort in groups). Ringelmann effect.</p>
+            <p><span class="bold">Cohesiveness:</span> Attraction level. Productivity depends on alignment with performance norms.</p>
+
+            <h3>Decision Making</h3>
+            <ul>
+                <li><span class="bold">Groupthink:</span> Consensus overrides appraisal.</li>
+                <li><span class="bold">Groupshift:</span> Polarized/Extreme views.</li>
+                <li><span class="bold">NGT:</span> Nominal Group Technique (Independent ranking).</li>
+            </ul>
+        </section>
+
+        <section id="ch10">
+            <h2>CH 10: WORK TEAMS</h2>
+            <p><span class="bold">Synergy:</span> Teams = Positive synergy (Sum > Parts).</p>
+            
+            <h3>Types of Teams</h3>
+            <ul>
+                <li><span class="bold">Problem-Solving:</span> Quality/Efficiency focus.</li>
+                <li><span class="bold">Self-Managed:</span> No supervisor; plan own work.</li>
+                <li><span class="bold">Cross-Functional:</span> Diverse expertise, same level.</li>
+                <li><span class="bold">Virtual:</span> Geographically dispersed via tech.</li>
+            </ul>
+
+            <h3>Effectiveness Model</h3>
+            <ul>
+                <li><span class="bold">Context:</span> Resources, Structure, Trust.</li>
+                <li><span class="bold">Composition:</span> Ability, Conscientiousness, Size (5-9).</li>
+                <li><span class="bold">Work Design:</span> Autonomy, Task Identity.</li>
+                <li><span class="bold">Process:</span> Purpose, Efficacy, Conflict.</li>
+            </ul>
+        </section>
+
+        <section id="ch11">
+            <h2>CH 11: COMMUNICATION</h2>
+            <p><span class="bold">Model:</span> Sender -> Encode -> Channel -> Decode -> Receiver.</p>
+            
+            <h3>Networks & Richness</h3>
+            <ul>
+                <li><span class="bold">Networks:</span> Chain (Formal), Wheel (Central), All-Channel (Active).</li>
+                <li><span class="bold">Grapevine:</span> 75% accuracy; informal.</li>
+                <li><span class="bold">Richness:</span> Face-to-face (High) vs. Reports (Low).</li>
+                <li><span class="bold">Barriers:</span> Filtering, Overload, Emotions, Apprehension.</li>
+            </ul>
+        </section>
+
+        <section id="ch12">
+            <h2>CH 12: LEADERSHIP</h2>
+            <h3>Trait & Behavioral</h3>
+            <p><span class="bold">Trait:</span> Born (Extraversion/EI). <span class="bold">Behavior:</span> Trained.</p>
+            <ul>
+                <li><span class="bold">Ohio:</span> Structure vs. Consideration.</li>
+                <li><span class="bold">Michigan:</span> Employee vs. Production.</li>
+                <li><span class="bold">Grid:</span> 9,9 Team Management is ideal.</li>
+            </ul>
+
+            <h3>Contingency Theories</h3>
+            <p><span class="bold">Fiedler:</span> Fixed style (LPC). Match to situation (Relations, Structure, Power).</p>
+            <p><span class="bold">Path-Goal:</span> Clarify path, remove blocks. Styles: Directive, Supportive, Participative, Achievement.</p>
+            <p><span class="bold">LMX:</span> In-Group vs. Out-Group dynamics.</p>
+            <p><span class="bold">Cognitive Resource:</span> Stress forces reliance on Experience > Intellect.</p>
+
+            <h3>Leadership Types</h3>
+            <ul>
+                <li><span class="bold">Charismatic:</span> Vision/Risk. Dark side: Narcissism.</li>
+                <li><span class="bold">Transactional:</span> Reward/Exchange, Laissez-Faire.</li>
+                <li><span class="bold">Transformational:</span> 4 I's (Idealized, Inspirational, Intellectual, Individual).</li>
+            </ul>
+        </section>
+
+        <section id="ch14">
+            <h2>CH 14: CONFLICT & NEG.</h2>
+            <p><span class="bold">Views:</span> Traditional (Bad), Interactionist (Needed), Resolution (Manage).</p>
+            <h3>Conflict Types</h3>
+            <ul>
+                <li><span class="bold">Task:</span> Goals (Functional if low).</li>
+                <li><span class="bold">Relationship:</span> Personal (Always Dysfunctional).</li>
+                <li><span class="bold">Process:</span> How-to (Functional if low).</li>
+            </ul>
+
+            <h3>Negotiation</h3>
+            <p><span class="bold">Distributive:</span> Fixed pie, Win-Lose, low info.</p>
+            <p><span class="bold">Integrative:</span> Expand pie, Win-Win, high info.</p>
+            
+            <h3>Key Terms</h3>
+            <ul>
+                <li><span class="bold">BATNA:</span> Best Alternative (Power source).</li>
+                <li><span class="bold">Target/Resistance:</span> Goal vs. Bottom line.</li>
+                <li><span class="bold">Bargaining Zone:</span> Overlap of resistance points.</li>
+            </ul>
+            <p><span class="bold">Logrolling:</span> Trading off issues of different importance to create value.</p>
+        </section>
+        
+    </div>
+</div>
+
+</body>
+</html>
